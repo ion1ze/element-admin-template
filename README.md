@@ -1,24 +1,13 @@
-# element-admin-template
+<div align="center">
+  <img src="docs/assets/images/logo.svg" alt="Logo" height="60">
+  <h3 align="center">Element Admin Template</h3>
+  <p align="center">
+    一款简单好用的后台前端模板
+  </p>
+</div>
 
-## Project setup
-```
-npm install
-```
+## 简介
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+简单好用，不炫技，适合初学者学习
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 使用方法

@@ -16,6 +16,6 @@
 
 ![登录页面](./docs/assets/images/screenshot-page-login.png)
 
-![仪表盘系统概况页面](./docs/assets/images/screenshot-page-dashboard-overview.png.png)
+![仪表盘系统概况页面](./docs/assets/images/screenshot-page-dashboard-overview.png)
 
 ![关于页面](./docs/assets/images/screenshot-page-about.png)

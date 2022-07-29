@@ -4,7 +4,7 @@
       <img v-if="isCollapsed" class="logo" src="@/assets/images/logo-e.png" alt="logo"/>
       <img v-else class="logo" src="@/assets/images/logo.svg" alt="logo"/>
     </div>
-    <el-menu class="admin-layout-aside-menu" background-color="#001529" :collapse="isCollapsed">
+    <el-menu class="admin-layout-aside-menu" background-color="#001529" :collapse="isCollapsed" :collapse-transition="false">
       <el-menu-item index="1">
         <i class="el-icon-stopwatch"></i>
         <span slot="title">仪表盘</span>
@@ -72,11 +72,6 @@ export default {
     flex: 1;
     border-right: none;
     overflow: hidden;
-
-    // 这里是解决点击收起展开按钮时的文字卡顿现象
-    &:not(.el-menu--collapse) {
-      width: 300px;
-    }
     
     .el-menu-item {
       color: #ffffff;

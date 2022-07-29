@@ -1,6 +1,6 @@
 export const setting = {
   state:{
-    isCollapsed:false
+    isCollapsed:false,
   },
   mutations:{
     changeCollapsedState(state,payload){

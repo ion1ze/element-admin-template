@@ -14,4 +14,6 @@
 
 ## 界面截图
 
-![登录界面](./docs/assets/images/screenshot-page-login.png)
+![登录页面](./docs/assets/images/screenshot-page-login.png)
+
+![关于页面](./docs/assets/images/screenshot-page-about.png)

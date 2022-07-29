@@ -1,5 +1,5 @@
 <template>
-  <div class="admin-layout-footer-content">
+  <div class="admin-layout-footer">
     <span class="copyright">
       &copy; 2022 Element Admin. All Rights Reserved
     </span>
@@ -7,11 +7,11 @@
 </template>
 <script>
 export default {
-  name: 'AdminLayoutFooterContent',
+  name: 'AdminLayoutFooter',
 };
 </script>
 <style lang="less">
-.admin-layout-footer-content {
+.admin-layout-footer {
   width: 100%;
   text-align: center;
   font-size: 13px;

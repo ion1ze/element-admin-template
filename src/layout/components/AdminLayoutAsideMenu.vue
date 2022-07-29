@@ -15,9 +15,9 @@
       </el-menu-item>
     </el-menu>
     <div class="admin-layout-aside-menu-footer">
-      <div class="collapse-button" @click="onChangeCollapsed">
+      <button class="collapse-button" @click="onChangeCollapsed">
         <i :class="collapsedIconName"></i>
-      </div>
+      </button>
     </div>
   </div>
 </template>
@@ -72,6 +72,7 @@ export default {
     flex: 1;
     border-right: none;
     overflow: hidden;
+    width: 100%;
     
     .el-menu-item {
       color: #ffffff;
@@ -90,6 +91,21 @@ export default {
     justify-content: center;
     align-items: center;
     color: #ffffff;
+
+    button.collapse-button {
+      border: none;
+      background-color: transparent;
+      color: #ffffff;
+      font-size: 16px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: rgba(0,0,0,.25);
+      }
+    }
   }
 }
 </style>

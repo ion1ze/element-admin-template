@@ -9,7 +9,10 @@
           <admin-layout-header/>
         </el-header>
         <el-main class="admin-layout-main">
-          <router-view/>
+          <keep-alive v-if="this.$route.meta && this.$route.meta.keepAlive">
+            <router-view/>
+          </keep-alive>
+          <router-view v-else/>
         </el-main>
         <el-footer class="admin-layout-footer-wrapper">
           <admin-layout-footer/>
@@ -40,7 +43,7 @@ export default {
           children:[
             {
               path: '/dashboard/overview',
-              title: '系统概览'
+              title: '系统概况'
             }
           ]
         },

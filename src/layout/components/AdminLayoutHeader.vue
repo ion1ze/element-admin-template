@@ -22,7 +22,7 @@ export default {
         this.$router.push('/account/center');
         break;
       case 'logout':
-        console.log('退出登录');
+        this.$router.push('/login');
         break;
       default:
         break;

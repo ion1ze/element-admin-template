@@ -10,7 +10,7 @@ VueRouter.prototype.push = function push(location){
   return originalPush.call(this,location).catch(err=>err);
 };
 
-const routes = [
+const constantRoutes = [
   {
     path:'/',
     redirect:'/login'
@@ -19,6 +19,9 @@ const routes = [
     path:'/login',
     component: () => import('@/pages/login/index.vue')
   },
+];
+
+const asyncRoutes = [
   {
     path:'/dashboard',
     redirect:'/dashboard/overview',
@@ -51,6 +54,8 @@ const routes = [
     ]
   }
 ];
+
+const routes = [...constantRoutes,...asyncRoutes];
 
 const router = new VueRouter({
   routes

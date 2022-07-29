@@ -43,9 +43,9 @@ export default {
   data(){
     return {
       form:{
-        username:'',
-        password:'',
-        captcha:''
+        username:'admin',
+        password:'123456',
+        captcha:'12345'
       },
       rules:{
         username: [
@@ -67,7 +67,7 @@ export default {
     onSubmit(){
       this.$refs['form'].validate((isValidated)=>{
         if(isValidated){
-          this.$message.success('登录成功');
+          this.$router.push('/dashboard/overview');
         }
       });
     },

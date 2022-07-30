@@ -12,6 +12,8 @@
 
 ## 使用方法
 
+[演示页面](https://ion1ze.github.io/element-admin-template/)
+
 ## 界面截图
 
 ![登录页面](./docs/assets/images/screenshot-page-login.png)

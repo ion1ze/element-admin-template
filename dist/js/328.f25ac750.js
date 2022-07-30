@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkelement_admin_template"]=self["webpackChunkelement_admin_template"]||[]).push([[328],{328:function(e,t,n){n.r(t),n.d(t,{default:function(){return s}});var l=function(){var e=this;e._self._c;return e._m(0)},u=[function(){var e=this,t=e._self._c;return t("div",{staticClass:"account-center"},[t("h1",[e._v("个人中心")])])}],a=n(1001),c={},r=(0,a.Z)(c,l,u,!1,null,null,null),s=r.exports}}]);
+//# sourceMappingURL=328.f25ac750.js.map

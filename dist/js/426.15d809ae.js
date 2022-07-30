@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkelement_admin_template"]=self["webpackChunkelement_admin_template"]||[]).push([[426],{1426:function(e,t,n){n.r(t),n.d(t,{default:function(){return _}});var u=function(){var e=this;e._self._c;return e._m(0)},l=[function(){var e=this,t=e._self._c;return t("div",{staticClass:"about"},[t("h1",[e._v("关于")]),t("p",[e._v("一款使用 Vue2 + Element UI 构建的后台前端模板")])])}],a={name:"AboutView"},s=a,i=n(1001),r=(0,i.Z)(s,u,l,!1,null,null,null),_=r.exports}}]);
+//# sourceMappingURL=426.15d809ae.js.map

@@ -16,5 +16,13 @@ module.exports = {
     'quotes':['error','single'],
     'semi':['error','always'],
     'indent':['error',2]
-  }
+  },
+  overrides: [
+    {
+      'files': ['*.vue'],
+      'rules': {
+        'quotes':['error','single'],
+      }
+    }
+  ]
 };

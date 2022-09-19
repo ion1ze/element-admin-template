@@ -10,10 +10,10 @@ VueRouter.prototype.push = function push(location){
   return originalPush.call(this,location).catch(err=>err);
 };
 
-const constantRoutes = [
+const ConstantRoutes = [
   {
     path:'/',
-    redirect:'/login'
+    redirect:'/home'
   },
   {
     path:'/login',
@@ -21,11 +21,14 @@ const constantRoutes = [
   },
 ];
 
-const asyncRoutes = [
+export const AsyncRoutes = [
   {
     path:'/dashboard',
     redirect:'/dashboard/overview',
     component:AdminLayout,
+    meta:{
+      roles: ['ROLE_ADMIN']
+    },
     children:[
       {
         path:'overview',
@@ -36,6 +39,9 @@ const asyncRoutes = [
   {
     path:'/account',
     component:AdminLayout,
+    meta:{
+      roles:['ROLE_ADMIN','ROLE_USER']
+    },
     children:[
       {
         path:'center',
@@ -46,6 +52,9 @@ const asyncRoutes = [
   {
     path:'/about',
     component:AdminLayout,
+    meta:{
+      roles:['ROLE_ADMIN','ROLE_USER']
+    },
     children:[
       {
         path:'',
@@ -55,7 +64,7 @@ const asyncRoutes = [
   }
 ];
 
-const routes = [...constantRoutes,...asyncRoutes];
+const routes = [...ConstantRoutes,...AsyncRoutes];
 
 const router = new VueRouter({
   routes

@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-const request = axios.create({
+const http = axios.create({
   baseURL:process.env.VUE_APP_API_BASE_URL,
   timeout:6000
 });
 
-request.interceptors.response.use((response)=>{
+http.interceptors.response.use((response)=>{
   return response.data;
 });
 
-export default request;
+export default http;

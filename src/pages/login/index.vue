@@ -13,22 +13,31 @@
             </el-input>
           </el-form-item>
           <el-form-item prop="password">
-            <el-input v-model="form.password" placeholder="请输入密码" show-password>
+            <el-input
+              v-model="form.password"
+              placeholder="请输入密码"
+              show-password
+            >
               <i slot="prefix" class="el-input__icon el-icon-lock"></i>
             </el-input>
           </el-form-item>
           <el-form-item prop="captcha" class="el-form-item-captcha">
             <el-input v-model="form.captcha" placeholder="请输入验证码">
-              <i slot="prefix" class="el-input__icon el-icon-picture-outline"></i>
+              <i
+                slot="prefix"
+                class="el-input__icon el-icon-picture-outline"
+              ></i>
             </el-input>
             <div class="captcha" @click="onChangeCaptcha">
-              <img src="@/assets/images/captcha.png" alt="captcha"/>
+              <img src="@/assets/images/captcha.png" alt="captcha" />
             </div>
           </el-form-item>
         </el-form>
         <div class="login-body-operations">
-          <el-button type="primary" @click="onSubmit" style="width: 100%;">登录</el-button>
-          <el-button @click="onReset" style="width: 100%;">重置</el-button>
+          <el-button type="primary" @click="onSubmit" style="width: 100%"
+            >登录</el-button
+          >
+          <el-button @click="onReset" style="width: 100%">重置</el-button>
         </div>
       </div>
       <div class="login-footer">
@@ -38,48 +47,61 @@
   </div>
 </template>
 <script>
+import store from '@/store';
 export default {
-  name:'LoginView',
-  data(){
+  name: 'LoginView',
+  data() {
     return {
-      form:{
-        username:'admin',
-        password:'123456',
-        captcha:'12345'
+      form: {
+        username: 'admin',
+        password: '123456',
+        captcha: '12345',
       },
-      rules:{
+      rules: {
         username: [
           { required: true, message: '请输入用户名', trigger: 'blur' },
-          { min: 5, max: 32, message: '用户名长度在 5 到 32 个字符', trigger: 'blur' }
+          {
+            min: 5,
+            max: 32,
+            message: '用户名长度在 5 到 32 个字符',
+            trigger: 'blur',
+          },
         ],
         password: [
           { required: true, message: '请输入密码', trigger: 'blur' },
-          { min: 6, max: 32, message: '密码长度在 6 到 32 个字符', trigger: 'blur' }
+          {
+            min: 6,
+            max: 32,
+            message: '密码长度在 6 到 32 个字符',
+            trigger: 'blur',
+          },
         ],
         captcha: [
           { required: true, message: '请输入验证码', trigger: 'blur' },
-          { len: 5, message: '验证码为5位', trigger: 'blur' }
+          { len: 5, message: '验证码为5位', trigger: 'blur' },
         ],
-      }
+      },
     };
   },
-  methods:{
-    onSubmit(){
-      this.$refs['form'].validate((isValidated)=>{
-        if(isValidated){
-          this.$router.push('/dashboard/overview');
+  methods: {
+    onSubmit() {
+      this.$refs['form'].validate((isValidated) => {
+        if (isValidated) {
+          // 设置token
+          localStorage.setItem('token', '1111');
+          store.dispatch('SetCurrentUser');
         }
       });
     },
-    onReset(){
+    onReset() {
       this.$refs['form'].resetFields();
       this.$message.success('重置表单成功');
     },
-    onChangeCaptcha(){
+    onChangeCaptcha() {
       // 改变图片验证码逻辑
       console.log('改变验证码');
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="less">
@@ -99,7 +121,7 @@ export default {
     .login-header {
       padding: 30px 0;
       text-align: center;
-      
+
       .title {
         color: var(--ea-text-color-primary);
       }
